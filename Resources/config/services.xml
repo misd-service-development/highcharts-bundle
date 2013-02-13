@@ -11,7 +11,11 @@
 
     <services>
 
-        <service id="misd_highcharts.renderer" class="%misd_highcharts.renderer.class%"/>
+        <service id="misd_highcharts.renderer" class="%misd_highcharts.renderer.class%">
+            <call method="setDispatcher">
+                <argument type="service" id="event_dispatcher"/>
+            </call>
+        </service>
 
         <service id="misd_highcharts.helper.renderer" class="%misd_highcharts.helper.renderer.class%">
             <tag name="templating.helper" alias="misd_highcharts.renderer"/>
