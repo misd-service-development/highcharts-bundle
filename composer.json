@@ -1,0 +1,33 @@
+{
+    "name":"misd/highcharts-bundle",
+    "type":"symfony-bundle",
+    "description":"Integrates PHP Highcharts into your Symfony2 application",
+    "keywords":["highcharts", "bundle", "charts", "chart", "graphs", "graph"],
+    "homepage":"https://github.com/misd-service-development/highcharts-bundle",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Chris Wilkinson",
+            "email":"chris.wilkinson@admin.cam.ac.uk"
+        }
+    ],
+    "support":{
+        "issues":"https://github.com/misd-service-development/highcharts-bundle/issues"
+    },
+    "require":{
+        "php":">=5.3.3",
+        "symfony/framework-bundle":"~2.1",
+        "misd/highcharts":"dev-master",
+        "zendframework/zend-json":"dev-master",
+        "zendframework/zend-stdlib":"dev-master"
+    },
+    "suggest":{
+        "symfony/twig-bundle":"to use the Twig functions"
+    },
+    "autoload":{
+        "psr-0":{
+            "Misd\\HighchartsBundle":""
+        }
+    },
+    "target-dir":"Misd/HighchartsBundle"
+}

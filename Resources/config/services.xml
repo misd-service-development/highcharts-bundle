@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="misd_highcharts.helper.renderer.class">Misd\HighchartsBundle\Helper\RendererHelper</parameter>
+        <parameter key="misd_highcharts.twig.extension.renderer.class">Misd\HighchartsBundle\Twig\Extension\RendererTwigExtension</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="misd_highcharts.renderer" class="%misd_highcharts.renderer.class%"/>
+
+        <service id="misd_highcharts.helper.renderer" class="%misd_highcharts.helper.renderer.class%">
+            <tag name="templating.helper" alias="misd_highcharts.renderer"/>
+            <argument type="service" id="misd_highcharts.renderer"/>
+        </service>
+
+        <service id="misd_highcharts.twig.extension.renderer"
+                 class="%misd_highcharts.twig.extension.renderer.class%"
+                 public="false">
+            <tag name="twig.extension"/>
+            <argument type="service" id="misd_highcharts.helper.renderer"/>
+        </service>
+
+    </services>
+
+</container>
