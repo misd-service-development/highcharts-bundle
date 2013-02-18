@@ -17,9 +17,7 @@
     "require":{
         "php":">=5.3.3",
         "symfony/framework-bundle":"~2.1",
-        "misd/highcharts":"dev-master",
-        "zendframework/zend-json":"dev-master",
-        "zendframework/zend-stdlib":"dev-master"
+        "misd/highcharts":"dev-master"
     },
     "suggest":{
         "symfony/twig-bundle":"to use the Twig functions"
