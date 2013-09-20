@@ -68,12 +68,12 @@ Use the service:
 In a Twig template:
 
     {{ highcharts_render(chart) }}
-    {{ highcharts_render_container(chart) }}
+    {{ highcharts_render_container(container) }}
 
 In a PHP template:
 
     <?php echo $view['misd_highcharts.renderer']->render($chart); ?>
-    <?php echo $view['misd_highcharts.renderer']->renderContainer($chart); ?>
+    <?php echo $view['misd_highcharts.renderer']->renderContainer($container); ?>
 
 Reporting an issue or a feature request
 ---------------------------------------
